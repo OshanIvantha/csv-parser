@@ -1,11 +1,12 @@
 {
   "name": "csv-parser",
   "version": "1.0.0",
-  "description": "",
+  "description": "Parse CSV files.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist/ && babel src --out-dir dist"
+    "test": "mocha test",
+    "build": "rimraf dist/ && babel src --out-dir dist",
+    "start": "npm run build && node dist/example.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +14,7 @@
   },
   "keywords": [],
   "author": "Oshan Mudannayake <oshan.ivantha@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/OshanIvantha/csv-parser/issues"
   },
@@ -21,6 +22,8 @@
   "devDependencies": {
     "@babel/preset-env": "^7.0.0-beta.46",
     "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "mocha": "^5.1.1",
     "rimraf": "^2.6.2"
   }
 }
